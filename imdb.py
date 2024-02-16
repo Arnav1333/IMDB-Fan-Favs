@@ -22,14 +22,13 @@ driver.get(url)
 
 driver.implicitly_wait(10)
 
-# Find all the movie titles
+
 movie_titles = driver.find_elements(By.XPATH, "//span[@data-testid='title']")
 movie_reviews = driver.find_elements(By.CLASS_NAME,"ipc-rating-star-group ipc-poster-card__rating-star-group sc-a885001d-0 kzmDax")
 
-# Extract and print the titles
 for title in movie_titles:
     print(title.text)
-# print(movie_titles)
+
     
 with open('movie_titles.txt', 'w') as file:
     for title in movie_titles:
@@ -37,6 +36,6 @@ with open('movie_titles.txt', 'w') as file:
 
 
 
-# Close the browser
+
 driver.quit()
 
