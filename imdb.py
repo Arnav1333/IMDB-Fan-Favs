@@ -19,7 +19,7 @@ url = 'https://www.imdb.com/what-to-watch/fan-favorites/?ref_=hm_fanfav_sm'
 
 driver.get(url)
 
-# Wait for the page to load
+
 driver.implicitly_wait(10)
 
 # Find all the movie titles
